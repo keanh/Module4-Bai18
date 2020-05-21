@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Xem thời tiết hôm nay</h1>
+<form method="post">
+    <input type="text" name="cityName">
+    <input type="submit" value="Tìm">
+</form>
+
+<th:block th:if="${city.name != null}">
+    <h5 th:text="${city.name}"></h5>
+    <h5 th:text="${city.wind.speed}"></h5>
+    <h5 th:text="${city.weather.name}"></h5>
+    <h5 th:text="${city.weather.temperature}"></h5>
+    <h5 th:text="${city.weather.description}"></h5>
+</th:block>
+
+</body>
+</html>
